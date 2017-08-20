@@ -2,14 +2,18 @@
   "name": "croppie",
   "version": "2.5.0",
   "description": "A simple javascript image cropper",
-  "main": "croppie.js",
+  "main": "lib/croppie.js",
   "devDependencies": {
+    "exports-loader": "^0.6.4",
     "gh-pages": "^0.11.0",
-    "mocha": "2.4.5"
+    "mocha": "2.4.5",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5"
   },
   "scripts": {
     "test": "mocha test/unit",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -34,5 +38,8 @@
     "croppie.css",
     "croppie.js",
     "croppie.min.js"
-  ]
+  ],
+  "dependencies": {
+    "promise-polyfill": "^6.0.2"
+  }
 }
